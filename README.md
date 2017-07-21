@@ -1,10 +1,10 @@
 # harringtonben.github.io
 # Basically an HTML version of your resume.
 
-# Each place you've worked must be contained in an article element.
-# Each article element should have a header that contains the name of the company and the dates of your employment.
-# Each article should contain at least one section that describes your position there.
-# No footer required for these articles.
+# *Each place you've worked must be contained in an article element.
+# *Each article element should have a header that contains the name of the company and the dates of your employment.
+# *Each article should contain at least one section that describes your position there.
+# *No footer required for these articles.
 # Contact information page
 
 # One article.
