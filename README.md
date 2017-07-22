@@ -33,3 +33,12 @@
 # *When the user hovers over one of the links, the color of the text should change.
 # *When the user hovers over one of the links, the background color of the element that contains the link should change.
 # *When the user clicks on one of the links, the element that contains the link should grow in size by 5px on the left and right.
+
+# Part 3 Requirements
+
+# Create 1 new HTML page: Blog
+# Add a link to this blog page in your existing navigation.
+# Create at least 5 blog entry "cards" for now. Each card should have:
+# A header section containing an H4 title and the date the blog was written.
+# A content section containing your body of text. These entries should be themed around your journey into development. As you discover new tricks, tips and tools, write about your discovery. Write about what you have tried and why it did or did not work. These entries will be helpful for you as you speak with other members of the development community (and will be helpful when you are frustrated - look how far you've come). For now, you can use placeholder text, but this should be your place to continue writing throughout this course.
+# Use Flexbox to achieve this
