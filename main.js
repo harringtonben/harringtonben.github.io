@@ -2,8 +2,8 @@ var allBlogs = []
 
 var blog1 = {
 	heading: "Week 1",
-	date: "7/26/2017",
-	blogPost: "Despite the constant negative ipsum covfefe. I write the best placeholder text, and I'm the biggest developer on the web by far... While that's mock-ups and this is politics, are they really so different? It’s about making placeholder text great again. That’s what people want, they want placeholder text to be great again. The concept of Lorem Ipsum was created by and for the Chinese in order to make U.S. design jobs non-competitive."
+	date: "7/31/2017",
+	blogPost: "This was one hell of a week. I started feeling pretty good about my knowledge of Javascript, and ended feeling like I didn't have the slightest clue in the world. I am getting to a point that I understand exactly why you would do something as soon as someone shows me how they did something, but I am still having trouble just starting the process. I am hoping that doing the planning sessions will help me know where to start and execute better code in the long run."
 };
 
 var blog2 = {
