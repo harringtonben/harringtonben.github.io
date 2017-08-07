@@ -9,7 +9,7 @@ var blog1 = {
 var blog2 = {
 	heading: "Week 2",
 	date: "7/26/2017",
-	blogPost: "I think the only difference between me and the other placeholder text is that I’m more honest and my words are more beautiful. It’s about making placeholder text great again. That’s what people want, they want placeholder text to be great again. Look at these words. Are they small words? And he referred to my words - if they're small, something else must be small. I guarantee you there's no problem, I guarantee. Be careful, or I will spill the beans on your placeholder text. You could see there was text coming out of her eyes, text coming out of her wherever."
+	blogPost: "This week on Game of Thrones, I learned that JavaScript makes me challenge my entire existance as a human and every time I feel like I am conquering a milestone the next thing that comes out of an instructors mouth just puts me right back at square one. Luckily there are 5 more months left of front end for me to feel like I have no idea what I am doing!"
 };
 
 var blog3 = {
