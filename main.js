@@ -7,27 +7,27 @@ var blog1 = {
 };
 
 var blog2 = {
-	heading: "Week 2",
-	date: "7/26/2017",
+	heading: "JavaScript Crushes My Soul",
+	date: "7/31/2017",
 	blogPost: "This week on Game of Thrones, I learned that JavaScript makes me challenge my entire existance as a human and every time I feel like I am conquering a milestone the next thing that comes out of an instructors mouth just puts me right back at square one. Luckily there are 5 more months left of front end for me to feel like I have no idea what I am doing!"
 };
 
 var blog3 = {
-	heading: "Week 3",
-	date: "7/26/2017",
-	blogPost: "I have a 10 year old son. He has words. He is so good with these words it's unbelievable. Look at that text! Would anyone use that? Can you imagine that, the text of your next webpage?! All of the words in Lorem Ipsum have flirted with me - consciously or unconsciously. That's to be expected. An 'extremely credible source' has called my office and told me that Lorem Ipsum's birth certificate is a fraud."
+	heading: "Group Projects",
+	date: "8/5/2017",
+	blogPost: "We had our first group project this week and man it was an experience! It really helped solidify the concept of relying on the people around you to accomplish tasks. We did a great job of lining out how to tackle the project and divy up the tickets to accomplish things. It also helped a lot that we were able to tackle merge conflicts together for the first time. Overall things are feeling pretty good right now!"
 };
 
 var blog4 = {
-	heading: "Week 4",
-	date: "7/26/2017",
-	blogPost: "I think the only card she has is the Lorem card. Lorem Ipsum is the single greatest threat. We are not - we are not keeping up with other websites. Look at that text! Would anyone use that? Can you imagine that, the text of your next webpage?! I was going to say something extremely rough to Lorem Ipsum, to its family, and I said to myself, 'I can't do it. I just can't do it. It's inappropriate. It's not nice.'"
+	heading: "Event Listeners",
+	date: "8/15/2017",
+	blogPost: "Event Listeners. Now THIS makes sense to me. It feels so good to finally be in a place where I am not googling everything that I need to do to be able to finish a project and can start from square one and get to the end of an assignment on my own for the most part."
 };
 
 var blog5 = {
-	heading: "Week 5",
-	date: "7/26/2017",
-	blogPost: "Despite the constant negative ipsum covfefe. You could see there was text coming out of her eyes, text coming out of her wherever. That other text? Sadly, it’s no longer a 10. Lorem Ipsum's father was with Lee Harvey Oswald prior to Oswald's being, you know, shot."
+	heading: "Markdown",
+	date: "8/22/2017",
+	blogPost: "Pretty easy week in terms of new material. Learned about markdown and making a proper readme for your Github repos and then expanded our work on event listeners with the famous WYSIWYG exercise. It was pretty intense, but I was happy that I was able to get through it!"
 };
 
 allBlogs.push(blog1)
