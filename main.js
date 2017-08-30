@@ -20,15 +20,16 @@ var blogContainer = document.getElementById("blog-container");
 function printBlog(blogs) {
 	for(var i = 0; i < blogs.length; i++) {
 		var domString = "";
-		domString += `<section class="blog-card">
-				       <div class="title">
-				         <h2>${blogs[i].heading}</h2>
-				         <h4>${blogs[i].date}</h4>
-				       </div>
-				       <div class="description">
-				        <p>${blogs[i].blogPost}</p>
-				       </div>
-				     </section>`;
+		domString += `<div class="col-sm-6 col-md-4">
+					    <div class="thumbnail">
+					      <img src="..." alt="...">
+					      <div class="caption">
+					        <h3>${blogs[i].heading}</h3>
+					        <h4>${blogs[i].date}</h4>
+					        <p class="blogdescription">${blogs[i].blogPost}</p>
+					      </div>
+					    </div>
+					  </div>`;
 
 	    blogContainer.innerHTML += domString;
 	}
