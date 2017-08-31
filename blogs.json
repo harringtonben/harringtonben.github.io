@@ -24,6 +24,16 @@
 		"heading": "Markdown",
 		"date": "8/22/2017",
 		"blogPost": "Pretty easy week in terms of new material. Learned about markdown and making a proper readme for your Github repos and then expanded our work on event listeners with the famous WYSIWYG exercise. It was pretty intense, but I was happy that I was able to get through it!"
+		},
+		{
+		"heading": "XHR",
+		"date": "8/29/2017",
+		"blogPost": "Onto more new concepts! This week it was HXR, which seems easy enough...until you have to worry about the delay in loading of multiple files...and there I went belly flopping into the valley of dispair. But, it was inevitably a really good thing because it forced me to really have to dig deep into documentation and really look at finding a sustainable and usable solution for the code that I am writing."
+		},
+		{
+		"heading": "Bootstrap",
+		"date": "8/31/2017",
+		"blogPost": "Oh thank God we started bootstrap finally! Styling and having an eye for styling are definitely some weak points for me, so have bootstrap at my disposal is a crutch that I really enjoy having access to, and has been a phenomenal break for my brain after the last couple of weeks of some pretty new concepts. I did see on the calendar that we start IIFE next week so the victory of something easy will be short lived. I'll still take it though."
 		}
 
 	]
