@@ -1,5 +1,5 @@
 var searchMe = document.getElementById("searchText");
-
+var blogs = [];
 
 var getAllTheBlogs = new XMLHttpRequest;
 getAllTheBlogs.addEventListener("load", bringMeTheBlogs);
@@ -11,6 +11,7 @@ function bringMeTheBlogs() {
 	var blogData = JSON.parse(this.responseText).blogs;
 	// console.log(blogData);
 	printBlog(blogData);
+	blogs = blogData;
 } 
 
 function whereAreTheBlogs() {
@@ -20,6 +21,7 @@ function whereAreTheBlogs() {
 var blogContainer = document.getElementById("blog-container");
 
 function printBlog(blogs) {
+	var blogString = ``;
 	for(var i = 0; i < blogs.length; i++) {
 		var domString = "";
 		domString += `<div class="col-sm-6 col-md-4">
@@ -31,9 +33,14 @@ function printBlog(blogs) {
 					      </div>
 					    </div>
 					  </div>`;
+		blogString += domString;
 
-	    blogContainer.innerHTML += domString;
 	}
+	writeToDom(blogString);
+}
+
+function writeToDom(strang) {
+	blogContainer.innerHTML = strang;
 }
 
 document.body.addEventListener("click", function(event) {
@@ -56,19 +63,21 @@ function printDatCard(printing) {
 
 }
 
-// searchMe.addEventListener('keypress', function(event) {
-//   // console.log("event", event.keyCode);
-//   if (event.key === 'Enter') {
-//     var txt = searchMe.value;
-//     //1. filter planets array
-//     var results = blogContainer.filter(function(thing){
-//       // console.log('filter thing', thing);
-//       return thing.name.indexOf(txt)>-1;
-//     })
-//     printBlog(results);
-//     // domString(results);
-//     // console.log(results);
-//     // console.log('you hit enter bitch', txt);
-//   }
-// })
+searchMe.addEventListener('keypress', function(event) {
+  // console.log("event", event.keyCode);
+  if (event.key === 'Enter') {
+    var txt = searchMe.value;
+    console.log(txt);
+    //1. filter planets array
+    var results = blogs.filter(function(thing){
+    	// debugger;
+      // console.log('filter thing', thing);
+      return thing.blogPost.indexOf(txt)>-1;
+    })
+    printBlog(results);
+    // domString(results);
+    // console.log(results);
+    // console.log('you hit enter bitch', txt);
+  }
+})
 
