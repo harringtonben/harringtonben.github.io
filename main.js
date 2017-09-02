@@ -1,29 +1,29 @@
-var searchMe = document.getElementById("searchText");
-var blogs = [];
-
-var getAllTheBlogs = new XMLHttpRequest;
-getAllTheBlogs.addEventListener("load", bringMeTheBlogs);
-getAllTheBlogs.addEventListener("error", whereAreTheBlogs);
-getAllTheBlogs.open("GET", "blogs.json");
-getAllTheBlogs.send();
+let searchMe = document.getElementById("searchText");
+let blogs = [];
 
 function bringMeTheBlogs() {
-	var blogData = JSON.parse(this.responseText).blogs;
+	let blogData = JSON.parse(this.responseText).blogs;
 	// console.log(blogData);
 	printBlog(blogData);
 	blogs = blogData;
 } 
 
-function whereAreTheBlogs() {
+const whereAreTheBlogs = () => {
 	console.log("The file doesn't work!!!")
 }
 
-var blogContainer = document.getElementById("blog-container");
+let getAllTheBlogs = new XMLHttpRequest;
+getAllTheBlogs.addEventListener("load", bringMeTheBlogs);
+getAllTheBlogs.addEventListener("error", whereAreTheBlogs);
+getAllTheBlogs.open("GET", "blogs.json");
+getAllTheBlogs.send();
 
-function printBlog(blogs) {
+let blogContainer = document.getElementById("blog-container");
+
+const printBlog = (blogs) => {
 	var blogString = ``;
-	for(var i = 0; i < blogs.length; i++) {
-		var domString = "";
+	for(let i = 0; i < blogs.length; i++) {
+		let domString = "";
 		domString += `<div class="col-sm-6 col-md-4">
 					    <div class="thumbnail">
 					      <div class="caption">
@@ -46,19 +46,19 @@ function writeToDom(strang) {
 document.body.addEventListener("click", function(event) {
 	// console.log(event);
 	if (event.target.parentNode.parentNode.parentNode.className === "col-sm-6 col-md-4") {
-		var printMe = event.target.parentNode.parentNode.parentNode.innerHTML;
-		console.log(printMe);
+		let printMe = event.target.parentNode.parentNode.parentNode.innerHTML;
+		// console.log(printMe);
 		printDatCard(printMe);
 	} else if (event.target.className === "caption"){
 		printMe = event.target.parentNode.parentNode.innerHTML;
-		console.log(event);
+		// console.log(event);
 		printDatCard(printMe);
 
 	}
 })
 
-function printDatCard(printing) {
-	var giveMetext = document.getElementById("fillme");
+const printDatCard = (printing) => {
+	let giveMetext = document.getElementById("fillme");
 	giveMetext.innerHTML = printing;
 
 }
@@ -66,10 +66,10 @@ function printDatCard(printing) {
 searchMe.addEventListener('keypress', function(event) {
   // console.log("event", event.keyCode);
   if (event.key === 'Enter') {
-    var txt = searchMe.value;
-    console.log(txt);
+    let txt = searchMe.value;
+    // console.log(txt);
     //1. filter planets array
-    var results = blogs.filter(function(thing){
+    let results = blogs.filter(function(thing){
     	// debugger;
       // console.log('filter thing', thing);
       return thing.blogPost.indexOf(txt)>-1;
