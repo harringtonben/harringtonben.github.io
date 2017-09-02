@@ -66,4 +66,4 @@
   - variable that stores DOM container element
   - Loop that iterates over the array, builds up a string, and then puts the string on the DOM
   ```
-![blog page screenshot](Blogs page screenshot.png)
+![blog page screenshot](https://raw.githubusercontent.com/harringtonben/harringtonben.github.io/master/Blogs%20page%20screenshot.png)
