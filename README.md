@@ -67,3 +67,20 @@
   - Loop that iterates over the array, builds up a string, and then puts the string on the DOM
   ```
 ![blog page screenshot](https://raw.githubusercontent.com/harringtonben/harringtonben.github.io/master/Blogs%20page%20screenshot.png)
+
+### How to run (Node must be installed on your machine):
+1. Go to: `https://www.npmjs.com/package/http-server` and install "http-server".  
+2. Navigate to the project folder in command line interface and type: `http-server -p 8080`  
+3. This will show at: `http://localhost:8080` in your internet browser.
+
+```
+git clone git@github.com:harringtonben/wysiwyg.git
+cd wysiwyg
+npm install http-server -g
+hs -c-1
+```
+This will show in your browser at: `http://localhost:8080`
+
+Contributors
+
+[Ben Harrington](https://github.com/harringtonben)
