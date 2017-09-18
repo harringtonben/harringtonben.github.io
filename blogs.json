@@ -34,7 +34,11 @@
 		"heading": "Bootstrap",
 		"date": "8/31/2017",
 		"blogPost": "Oh thank God we started bootstrap finally! Styling and having an eye for styling are definitely some weak points for me, so have bootstrap at my disposal is a crutch that I really enjoy having access to, and has been a phenomenal break for my brain after the last couple of weeks of some pretty new concepts. I did see on the calendar that we start IIFE next week so the victory of something easy will be short lived. I'll still take it though."
+		},
+		{
+		"heading": "Task Runners and Browserify",
+		"date": "9/18/2017",
+		"blogPost": "Task runners and browserify are AWESOME. Finally, something that truly makes JavaScript modular and logical to me. It took a second to get over the thinking with how XHR calls and loading factor into that, but now that I am over that hurdle I am all about this browserify business. It also just makes everything look so clean and streamlined in your project and way easier to track certain code down etc."
 		}
-
 	]
 }
