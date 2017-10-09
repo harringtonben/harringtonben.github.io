@@ -1,30 +1,18 @@
-let searchMe = document.getElementById("searchText");
+
 let blogs = [];
 
-function bringMeTheBlogs() {
-	let blogData = JSON.parse(this.responseText).blogs;
-	// console.log(blogData);
-	printBlog(blogData);
-	blogs = blogData;
-} 
-
-const whereAreTheBlogs = () => {
-	console.log("The file doesn't work!!!")
-}
-
-let getAllTheBlogs = new XMLHttpRequest;
-getAllTheBlogs.addEventListener("load", bringMeTheBlogs);
-getAllTheBlogs.addEventListener("error", whereAreTheBlogs);
-getAllTheBlogs.open("GET", "blogs.json");
-getAllTheBlogs.send();
-
-let blogContainer = document.getElementById("blog-container");
+$.ajax("blogs.json").done((data)=> {
+	blogs = data.blogs;
+	printBlog(blogs);
+}).fail((error)=> {
+	console.log(error);
+});
 
 const printBlog = (blogs) => {
 	var blogString = ``;
 	for(let i = 0; i < blogs.length; i++) {
 		let domString = "";
-		domString += `<div class="col-sm-6 col-md-4">
+		domString += `<div id="blogCard" class="col-sm-6 col-md-4">
 					    <div class="thumbnail">
 					      <div class="caption">
 					        <h3>${blogs[i].heading}</h3>
@@ -40,44 +28,28 @@ const printBlog = (blogs) => {
 }
 
 function writeToDom(strang) {
-	blogContainer.innerHTML = strang;
+	$("#blog-container").html(strang);
 }
 
-document.body.addEventListener("click", function(event) {
-	// console.log(event);
-	if (event.target.parentNode.parentNode.parentNode.className === "col-sm-6 col-md-4") {
-		let printMe = event.target.parentNode.parentNode.parentNode.innerHTML;
-		// console.log(printMe);
-		printDatCard(printMe);
-	} else if (event.target.className === "caption"){
-		printMe = event.target.parentNode.parentNode.innerHTML;
-		// console.log(event);
-		printDatCard(printMe);
-
+$("body").click((event)=> {	
+	if ($(event.target).hasClass("caption")) {
+		printDatCard($(event.target).parent().html());
 	}
-})
+});
 
 const printDatCard = (printing) => {
-	let giveMetext = document.getElementById("fillme");
-	giveMetext.innerHTML = printing;
-
+	$("#fillme").html(printing);
+	$("#fillme").addClass("jumbotron");
 }
 
-searchMe.addEventListener('keypress', function(event) {
-  // console.log("event", event.keyCode);
-  if (event.key === 'Enter') {
-    let txt = searchMe.value;
-    // console.log(txt);
-    //1. filter planets array
-    let results = blogs.filter(function(thing){
-    	// debugger;
-      // console.log('filter thing', thing);
-      return thing.blogPost.indexOf(txt)>-1;
-    })
-    printBlog(results);
-    // domString(results);
-    // console.log(results);
-    // console.log('you hit enter bitch', txt);
-  }
-})
+$("#searchText").keypress((event) => {
+ if (event.key === 'Enter') {		 
+	var txt = $("#searchText").val();
+	let results = blogs.filter((thing)=> {
+			return thing.blogPost.indexOf(txt)>-1;
+	});
+	printBlog(results);
+ }   
+});
+
 
