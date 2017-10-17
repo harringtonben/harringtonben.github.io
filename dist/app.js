@@ -3,12 +3,16 @@
 
 let blogs = [];
 
-$.ajax("/db/blogs.json").done((data)=> {
-	blogs = data.blogs;
-	printBlog(blogs);
-}).fail((error)=> {
-	console.log(error);
-});
+
+const initializer = () => {
+    $.ajax("/db/blogs.json").done((data)=> {
+        blogs = data.blogs;
+        printBlog(blogs);
+    }).fail((error)=> {
+        console.log(error);
+    });
+};
+
 
 const printBlog = (blogs) => {
 	var blogString = ``;
@@ -29,9 +33,19 @@ const printBlog = (blogs) => {
 	writeToDom(blogString);
 };
 
-function writeToDom(strang) {
+const writeToDom = (strang) => {
 	$("#blog-container").html(strang);
-}
+};
+
+const getBlogs = () => {
+    return blogs;
+};
+
+module.exports = {initializer, printBlog, getBlogs};
+},{}],2:[function(require,module,exports){
+"use strict";
+
+const data = require("./data");
 
 $("body").click((event)=> {	
 	if ($(event.target).hasClass("caption")) {
@@ -47,13 +61,26 @@ const printDatCard = (printing) => {
 $("#searchText").keypress((event) => {
  if (event.key === 'Enter') {		 
 	var txt = $("#searchText").val();
-	let results = blogs.filter((thing)=> {
+	let results = data.getBlogs().filter((thing)=> {
 			return thing.blogPost.indexOf(txt)>-1;
 	});
-	printBlog(results);
+	data.printBlog(results);
  }   
+});
+
+module.exports = {};
+},{"./data":1}],3:[function(require,module,exports){
+"use strict";
+
+const data = require("./data");
+require("./events");
+
+$(document).ready(() => {
+	data.initializer();
 });
 
 
 
-},{}]},{},[1]);
+
+
+},{"./data":1,"./events":2}]},{},[3]);
