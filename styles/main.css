@@ -1,0 +1,36 @@
+/* Main Styling */
+body {
+  background-color: #247BA0;
+  color: #605F5E;
+  margin: 0;
+  font-family: 'Roboto', sans-serif; }
+
+a {
+  color: #FDFDFF;
+  text-decoration: none; }
+
+footer {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #95A0A5; }
+
+.navbar-brand img {
+  height: 25px;
+  width: 25px; }
+
+.social-logo {
+  height: 25px;
+  width: 25px; }
+
+.social {
+  max-width: 50%;
+  text-align: center;
+  color: #393D3F; }
+
+.social ul {
+  list-style: none; }
+
+.blogdescription {
+  height: 100px;
+  overflow: scroll; }
