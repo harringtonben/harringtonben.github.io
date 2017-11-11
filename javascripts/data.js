@@ -1,17 +1,8 @@
 "use strict";
 
+const firebaseApi = require('./firebaseapi');
+
 let blogs = [];
-
-
-const initializer = () => {
-    $.ajax("/db/blogs.json").done((data)=> {
-        blogs = data.blogs;
-        printBlog(blogs);
-    }).fail((error)=> {
-        console.log(error);
-    });
-};
-
 
 const printBlog = (blogs) => {
 	var blogString = ``;
@@ -40,4 +31,4 @@ const getBlogs = () => {
     return blogs;
 };
 
-module.exports = {initializer, printBlog, getBlogs};
+module.exports = { printBlog, getBlogs};
