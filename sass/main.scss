@@ -46,13 +46,20 @@ footer {
 	overflow: scroll;
 }
 
-// .clearfix() {
-//   &:before,
-//   &:after {
-//     content: " ";
-//     display: table;
-//   }
-//   &:after {
-//     clear: both;
-//   }
-// }
+.screenrecording {
+	height: 300px;
+	width: 500px;
+	text-align: center;
+}
+
+.gif {
+	text-align: center;
+}
+
+.projects {
+	margin: 10px;
+
+	a {
+		color: $mid-text-color;
+	}
+}

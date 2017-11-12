@@ -34,3 +34,16 @@ footer {
 .blogdescription {
   height: 100px;
   overflow: scroll; }
+
+.screenrecording {
+  height: 300px;
+  width: 500px;
+  text-align: center; }
+
+.gif {
+  text-align: center; }
+
+.projects {
+  margin: 10px; }
+  .projects a {
+    color: #95A0A5; }

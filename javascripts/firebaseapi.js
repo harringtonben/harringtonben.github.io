@@ -6,6 +6,7 @@ let firebaseKey = '';
 const setKey = (key) => {
     firebaseKey = key;
     callBlogs();
+    callProjects();
 };
 
 const getBlogs = () => {
@@ -25,13 +26,37 @@ const getBlogs = () => {
     });
 };
 
+const getProjects = () => {
+    let myProjects = [];
+    return new Promise((resolve, reject) => {
+        $.ajax(`${firebaseKey.databaseURL}/projects.json`).then((projects) => {
+            if (projects != null) {
+                Object.keys(projects).forEach((key) => {
+                    projects[key].id = key;
+                    myProjects.push(projects[key]);
+                });
+            }
+            resolve(myProjects);
+        }).catch((error) => {
+            resolve(error);
+        });
+    });
+};
+
 const callBlogs = () => {
 	getBlogs().then((results) => {
-		console.log(results);
 		data.printBlog(results);
 	}).catch((error) => {
 		console.log('error in getting blogs: ', error);
 	});
 };
 
-module.exports = {setKey, getBlogs};
+const callProjects = () => {
+    getProjects().then((results) => {
+        data.printProjects(results);
+    }).catch((error) => {
+        console.log('error in getting projects', error);
+    });
+};
+
+module.exports = {setKey};

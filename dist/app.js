@@ -47,18 +47,34 @@ const printBlog = (blogs) => {
 		blogString += domString;
 
 	}
-	writeToDom(blogString);
+	writeToDom(blogString, '#blog-container');
 };
 
-const writeToDom = (strang) => {
-	$("#blog-container").html(strang);
+const printProjects = (projects) => {
+	let projectString = ``;
+	projects.forEach((project) => {
+		projectString += `<div class="col-sm-6 col-md-4">`;
+		projectString += `<div class="thumbnail projects">`;
+		projectString += 		`<h2>${project.Name}</h2>`;
+		projectString += 		`<div class="gif">`;
+		projectString += 			`<img class="screenrecording" src="${project.GIFURL}">`;
+		projectString +=		`</div>`;
+		projectString +=		`<a href="${project.GitHubURL}">View this project here</a>`;
+		projectString += `</div>`;
+		projectString += `</div>`;
+	});
+	writeToDom(projectString, '#projects-container');
+};
+
+const writeToDom = (strang, element) => {
+	$(element).html(strang);
 };
 
 const getBlogs = () => {
     return blogs;
 };
 
-module.exports = { printBlog, getBlogs};
+module.exports = {printBlog, getBlogs, printProjects};
 },{"./firebaseapi":5}],3:[function(require,module,exports){
 "use strict";
 
@@ -95,6 +111,7 @@ let firebaseKey = '';
 const setKey = (key) => {
     firebaseKey = key;
     callBlogs();
+    callProjects();
 };
 
 const getBlogs = () => {
@@ -114,16 +131,40 @@ const getBlogs = () => {
     });
 };
 
+const getProjects = () => {
+    let myProjects = [];
+    return new Promise((resolve, reject) => {
+        $.ajax(`${firebaseKey.databaseURL}/projects.json`).then((projects) => {
+            if (projects != null) {
+                Object.keys(projects).forEach((key) => {
+                    projects[key].id = key;
+                    myProjects.push(projects[key]);
+                });
+            }
+            resolve(myProjects);
+        }).catch((error) => {
+            resolve(error);
+        });
+    });
+};
+
 const callBlogs = () => {
 	getBlogs().then((results) => {
-		console.log(results);
 		data.printBlog(results);
 	}).catch((error) => {
 		console.log('error in getting blogs: ', error);
 	});
 };
 
-module.exports = {setKey, getBlogs};
+const callProjects = () => {
+    getProjects().then((results) => {
+        data.printProjects(results);
+    }).catch((error) => {
+        console.log('error in getting projects', error);
+    });
+};
+
+module.exports = {setKey};
 },{"./data":2}],5:[function(require,module,exports){
 arguments[4][4][0].apply(exports,arguments)
 },{"./data":2,"dup":4}],6:[function(require,module,exports){

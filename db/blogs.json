@@ -39,6 +39,44 @@
 		"heading": "Task Runners and Browserify",
 		"date": "9/18/2017",
 		"blogPost": "Task runners and browserify are AWESOME. Finally, something that truly makes JavaScript modular and logical to me. It took a second to get over the thinking with how XHR calls and loading factor into that, but now that I am over that hurdle I am all about this browserify business. It also just makes everything look so clean and streamlined in your project and way easier to track certain code down etc."
+		},
+		{
+		"heading": "Chatty App Group Project and Jquery",
+		"date": "10/6/2017",
+		"blogPost": "The chatty app was definitely a unique experience. Everyone in my group was incredibly sharp, so we really pushed each other, and being able to use jquery really allowed us to get things spun up quickly. BUT that definitely caused a problem where we just kept pushing and paushing each other to try and stretch the app as far as we could, which ended up in a bad idea to commit something not fully tested to master 2 minutes before we demoed, which resulted in a completely broken app. I learned really quickly that I will NEVER make that mistake again! "
+		},
+		{
+		"heading": "Promises",
+		"date": "10/15/2017",
+		"blogPost": "Not much to say here, other than that this would have been REALLY nice to have about a month ago!"
+		},
+		{
+		"heading": "APIs",
+		"date": "10/24/2017",
+		"blogPost": "Once we really started bringing in data from APIs I finally started feeling like a real developer. There is so much power with pulling in data for your apps via an API and it is so awesome to see that there is pretty much an API for anything. Really started getting my brain going for capstones"
+		},
+		{
+		"heading": "Firebase",
+		"date": "10/31/2017",
+		"blogPost": "I already have a love-hate relationship with firebase. It is awesome, but man if you don't get the data structure perfect it is a freaking damn nightmare. This just made me stoked to get to the backend so we can pull data via a SQL database instead of basically a giant object."
+		}
+	],
+	"projects":
+	[
+		{
+		"Name": "WeatherApp",
+		"GitHubURL": "https://github.com/harringtonben/localweatherapp",
+		"GIFURL": "http://g.recordit.co/27NSKdMN2u.gif"
+		},
+		{
+		"Name": "Acme Explosives",
+		"GitHubURL": "https://github.com/harringtonben/acmeexplosives",
+		"GIFURL": "http://g.recordit.co/jrk4XPxFDt.gif"
+		},
+		{
+		"Name": "Chatty App",
+		"GitHubURL": "https://github.com/nss-evening-cohort-06/chatty-fancy-butterflies",
+		"GIFURL": "https://user-images.githubusercontent.com/30006986/30834406-99eebf50-a218-11e7-8b56-9f3e053ef105.gif"
 		}
 	]
 }

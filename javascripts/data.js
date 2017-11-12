@@ -20,15 +20,31 @@ const printBlog = (blogs) => {
 		blogString += domString;
 
 	}
-	writeToDom(blogString);
+	writeToDom(blogString, '#blog-container');
 };
 
-const writeToDom = (strang) => {
-	$("#blog-container").html(strang);
+const printProjects = (projects) => {
+	let projectString = ``;
+	projects.forEach((project) => {
+		projectString += `<div class="col-sm-6 col-md-4">`;
+		projectString += `<div class="thumbnail projects">`;
+		projectString += 		`<h2>${project.Name}</h2>`;
+		projectString += 		`<div class="gif">`;
+		projectString += 			`<img class="screenrecording" src="${project.GIFURL}">`;
+		projectString +=		`</div>`;
+		projectString +=		`<a href="${project.GitHubURL}">View this project here</a>`;
+		projectString += `</div>`;
+		projectString += `</div>`;
+	});
+	writeToDom(projectString, '#projects-container');
+};
+
+const writeToDom = (strang, element) => {
+	$(element).html(strang);
 };
 
 const getBlogs = () => {
     return blogs;
 };
 
-module.exports = { printBlog, getBlogs};
+module.exports = {printBlog, getBlogs, printProjects};
