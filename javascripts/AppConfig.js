@@ -1,21 +1,19 @@
 'use strict';
 
-app.run(function() {
-
-});
 
 app.config(function($routeProvider) {
     $routeProvider
         .when("/about", {
-            templateUrl: 'partials/blog.html'
+            templateUrl: 'partials/about.html',
+        
         })
         .when("/blog", {
             templateUrl: 'partials/blog.html',
-            controller: 'BlogCtrl.js'
+            controller: 'BlogCtrl'
         })
         .when("/projects", {
             templateUrl: 'partials/projects.html',
-            controller: 'ProjectCtrl.js'
+            controller: 'ProjectCtrl'
         })
         .when("/contact", {
             templateUrl: 'partials/contact.html'
