@@ -1,109 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>About</title>
-	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="./lib/node_modules/bootstrap/dist/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="./styles/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ben Harrington: Developer</title>
+		<link rel="stylesheet" type="text/css" href="./lib/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./styles/main.css">
 </head>
-<body>
+<body ng-app="PersonalSite">
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#"><img src="https://2.bp.blogspot.com/-EDwBC1yiZkw/VyCJOAB9qLI/AAAAAAAACTQ/uB9Nu_VdcbEV-ZDapZDBEStaB0SAralzQCLcB/s1600/ring3.png" alt="brand"></a>
-    </div>
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Resume</a></li>
-		<li><a href="about.html">About Me</a></li>
-		<li><a href="projects.html">Projects</a></li>
-		<li><a href="blog.html">Blog</a></li>
-		<li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+    <div ng-include="'./partials/navbar.html'"></div>
+    <div class="col-xs-8 col-xs-offset-2" ng-view></div>
 
-<div class="container">
-<div class="thumbnail">
-	<div>
-		<h1>Meet Ben Harrington</h1>
-		<h3>Developer in Training</h3>
-	</div>
-		<h3>Professional Experience</h3>
-	<div>
-		<h4>Customer Support Specialist</h4>
-			<p>Emma Inc.<br>
-			November 2016-Present<br>
-			Responsible for: Troubleshooting customer issues related to platform</p>
-	</div>
-	<div>
-		<h4>Sample Specialist</h4>
-			<p>HealthStream<br>
-			October 2015-November2016<br>
-			Responsible for:
-				<ul>
-					<li>Oversight of data submission and processing for hospital systems</li>
-					<li>Maintain data for assigned hospitals and communicate any discrepancies/inconsistencies with submitted data</li>
-					<li>Communicate with clients about how to better improve data being sent in</li>
-					<li>Onboarding/establishing initial relationships with clients new to the HealthStream research platform</li>
-					<li>Act as User admin for the PX SQL UI</li>
-					<li>Work across multiple teams to streamline process and create solutions for higher productivity/ efficiency.</li>
-				</ul>
-			</p>
-	</div>
-	<div>
-		<h4>Implementations Programmer</h4>
-			<p>HealthStream<br>
-			December 2014-October 2015<br>
-			Responsible for: 
-				<ul>
-					<li>Survey design and survey/data QA.</li>
-					<li>Build all surveys for paper distribution.</li>
-					<li>QA web, paper, and phone projects.</li>
-					<li>Dealing with and resolving both internal and external issues and concerns in relation to survey programming.</li>
-					<li>Help to develop new ways to streamline processes while delivering a perfect product.</li>
-					<li>Act as a liaison between Healthstream and Wilkins Research in relation to all phone scripts being dialed out of Wilkins Call Center.</li>
-					<li>Work alongside eSurvey team to provide backup of Verint QA and any necessary data QA.</li>
-				</ul>
-			</p>
-	</div>
-	<div>
-		<h4>Store Manager</h4>
-			<p>Frugal Macdoogal<br>
-			July 2013-December 2014<br>
-			Responsible for:
-				<ul>
-					<li>All store functions and procedures for the store.</li>
-					<li>Placing keg orders and customer special orders.</li>
-					<li>Dealing with and resolving customer complaints and concerns.</li>
-					<li>Count registers at the beginning of shifts and closing.</li>
-					<li>Selling and promoting new products to existing and potential customers.</li>
-					<li>Help coordinate displays and promotions with wholesalers.</li>
-					<li>Handle social media for the store including instagram and twitter.</li>
-				</ul>
-			</p>
-	</div>
-</div>
-</div>
-<footer>
-	Copyright 2017 Ben Harrington
-</footer>	
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>  
+<script type="text/javascript" src="./lib/node_modules/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="./lib/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./lib/node_modules/angular/angular.min.js"></script>
+<script type="text/javascript" src="./lib/node_modules/angular-animate/angular-animate.min.js"></script>
+<script type="text/javascript" src="./lib/node_modules/angular-route/angular-route.min.js"></script>
+<script type="text/javascript" src="./lib/node_modules/angular-sanitize/angular-sanitize.min.js"></script>
+<script type="text/javascript" src="./vendor/navbar.js"></script>
 
-<script type="text/javascript" src="./lib/node_modules/jquery/dist/jquery.js"></script>
-<script type="text/javascript" src="./lib/node_modules/bootstrap/dist/js/bootstrap.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
-<script type="text/javascript" src="./dist/app.js"></script>
+<script type="text/javascript" src="./javascripts/app.js"></script>
+<script type="text/javascript" src="./javascripts/AppConstants.js"></script>
+<script type="text/javascript" src="./javascripts/AppConfig.js"></script>
+
+<script type="text/javascript" src="./javascripts/controllers/BlogCtrl.js"></script>
+<script type="text/javascript" src="./javascripts/controllers/ProjectCtrl.js"></script>
+<script type="text/javascript" src="./javascripts/controllers/NavCtrl.js"></script>
 </body>
 </html>

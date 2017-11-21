@@ -1,12 +1,12 @@
-"use strict";
+// "use strict";
 
-const data = require("./data");
-const apiKeys = require('./apiKeys');
-require("./events");
+// const data = require("./data");
+// const apiKeys = require('./apiKeys');
+// require("./events");
 
-$(document).ready(() => {
-	apiKeys.retrieveKeys();
-});
+// $(document).ready(() => {
+// 	apiKeys.retrieveKeys();
+// });
 
 
 
