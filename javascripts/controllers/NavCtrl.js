@@ -6,8 +6,6 @@ app.controller("NavCtrl", function() {
         var trigger = $('.hamburger'),
             overlay = $('.overlay'),
            isClosed = false;
-
-           console.log(isClosed);
       
           trigger.click(function () {
             hamburger_cross();      

@@ -1,3 +1,13 @@
-<div>
-  {{controller}}
+<div class="col-xs-8 col-xs-offset-2">
+  <div class="img-rounded blogs" ng-repeat="blog in blogs">
+    <h3>
+      {{blog.heading}}
+    </h3>
+    <p>
+      {{blog.date}}
+    </p>
+    <p>
+      {{blog.blogPost}}
+    </p>
+  </div>
 </div>

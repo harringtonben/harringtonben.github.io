@@ -1,12 +1,13 @@
 @import "https://designmodo.github.io/Flat-UI/dist/css/flat-ui.min.css";
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css";
 @import "https://daneden.github.io/animate.css/animate.min.css";
+@import "variables";
 /*-------------------------------*/
 /*           VARIABLES           */
 /*-------------------------------*/
 
 // BACKGROUND COLOR
-$bg-color: #202ead;
+$bg-color: $mid-text-color;
 
 // TEXT COLOR
 $text-color: #fff;
@@ -42,6 +43,7 @@ body,
 html {
   height: $full-height;
   background-color: $bg-color;
+  background-image: "images/background.jpg";
 }
 
 .nav {
@@ -118,7 +120,7 @@ html {
     &:before {
       background-color: #1c1c1c;
       content: '';
-      height: $full-height;
+      // height: $full-height;
       left: 0;
       position: absolute;
       top: 0;
@@ -243,7 +245,7 @@ html {
   &:before {
     -webkit-transform: translate3d(0,0,0);
     -webkit-transition: all .35s ease-in-out;
-    color: #ffffff;
+    color: #000;
     content: '';
     display: block;
     font-size: 14px;

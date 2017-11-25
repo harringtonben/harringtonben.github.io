@@ -1,6 +1,10 @@
 'use strict';
 
 
+app.run(function(FIREBASE_CONFIG) {
+    firebase.initializeApp(FIREBASE_CONFIG);
+});
+
 app.config(function($routeProvider) {
     $routeProvider
         .when("/about", {
@@ -14,9 +18,6 @@ app.config(function($routeProvider) {
         .when("/projects", {
             templateUrl: 'partials/projects.html',
             controller: 'ProjectCtrl'
-        })
-        .when("/contact", {
-            templateUrl: 'partials/contact.html'
         })
         .otherwise('/about');
 });
