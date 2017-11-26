@@ -2,6 +2,7 @@
 @import "navbar";
 @import "about";
 @import "blogs";
+@import "projects";
 
 /* Main Styling */
 
@@ -11,12 +12,19 @@ body {
 	margin: 0;
 	font-family: 'Roboto', sans-serif;
 	background-size: 100%;
+	background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 a {
 	color: $light-text-color;
-	text-decoration: none; 
+	text-decoration: none; 	
 }
+
+a:hover {
+	color: $mid-dark-text-color;
+}
+
 
 footer {
 	text-align: center;

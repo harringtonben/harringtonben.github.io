@@ -269,6 +269,9 @@ html {
   .about .social-logo {
     height: 50px;
     width: 50px; }
+  .about .me {
+    height: 150px;
+    width: 185px; }
 
 .blogs {
   background-color: rgba(0, 0, 0, 0.7);
@@ -278,17 +281,33 @@ html {
   -moz-box-shadow: 0px 6px 23px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 6px 23px 0px rgba(0, 0, 0, 0.75); }
 
+.projects {
+  background-color: rgba(0, 0, 0, 0.7);
+  margin-top: 15px;
+  padding: 30px;
+  -webkit-box-shadow: 0px 6px 23px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 6px 23px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 6px 23px 0px rgba(0, 0, 0, 0.75); }
+  .projects .project-gif {
+    height: 275px;
+    width: 500px; }
+
 /* Main Styling */
 body {
   background-color: #FDFDFF;
   color: #FDFDFF;
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  background-size: 100%; }
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
 
 a {
   color: #FDFDFF;
   text-decoration: none; }
+
+a:hover {
+  color: #308dbb; }
 
 footer {
   text-align: center;

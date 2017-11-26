@@ -1,3 +1,8 @@
-<div class="col-xs-8 col-xs-offset-2">
-  {{controller}}
+<div class="col-xs-6 col-xs-offset-3 text-center">
+  <div class="img-rounded projects" ng-repeat="project in projects">
+      <img class="project-gif" ng-src="{{project.GIFURL}}" alt="project">
+      <h3>
+        <a href="{{project.GitHubURL}}">View this project here</a>
+      </h3>
+  </div>
 </div>
