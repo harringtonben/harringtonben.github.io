@@ -11,7 +11,6 @@ body {
 body,
 html {
   height: 100%;
-  background-color: #95A0A5;
   background-image: "images/background.jpg"; }
 
 .nav .open > a {
@@ -294,7 +293,6 @@ html {
 
 /* Main Styling */
 body {
-  background-color: #FDFDFF;
   color: #FDFDFF;
   margin: 0;
   font-family: 'Roboto', sans-serif;
