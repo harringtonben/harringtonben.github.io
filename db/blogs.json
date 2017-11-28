@@ -66,17 +66,22 @@
 		{
 		"Name": "WeatherApp",
 		"GitHubURL": "https://github.com/harringtonben/localweatherapp",
-		"GIFURL": "http://g.recordit.co/27NSKdMN2u.gif"
+		"GIFURL": "images/Weatherapp.gif"
 		},
 		{
 		"Name": "Acme Explosives",
 		"GitHubURL": "https://github.com/harringtonben/acmeexplosives",
-		"GIFURL": "http://g.recordit.co/jrk4XPxFDt.gif"
+		"GIFURL": "images/Acmeexplosives.gif"
 		},
 		{
 		"Name": "Chatty App",
 		"GitHubURL": "https://github.com/nss-evening-cohort-06/chatty-fancy-butterflies",
 		"GIFURL": "https://user-images.githubusercontent.com/30006986/30834406-99eebf50-a218-11e7-8b56-9f3e053ef105.gif"
+		},
+		{
+		"Name": "Dem Badges",
+		"GitHubURL": "https://github.com/harringtonben/dembadges",
+		"GIFURL": "images/dembadges.gif"
 		}
 	]
 }

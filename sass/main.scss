@@ -1,18 +1,29 @@
 @import "variables";
+@import "navbar";
+@import "about";
+@import "blogs";
+@import "projects";
 
 /* Main Styling */
 
 body {
-	background-color: $body-color;
-	color: $dark-text-color;
+	color: $light-text-color;
 	margin: 0;
 	font-family: 'Roboto', sans-serif;
+	background-size: 100%;
+	background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 a {
 	color: $light-text-color;
-	text-decoration: none; 
+	text-decoration: none; 	
 }
+
+a:hover {
+	color: $mid-dark-text-color;
+}
+
 
 footer {
 	text-align: center;
@@ -21,45 +32,3 @@ footer {
 	color: $mid-text-color;
 }
 
-.navbar-brand img {
-	height: 25px;
-	width: 25px;
-}
-
-.social-logo {
-	height: 25px;
-	width: 25px;
-}
-
-.social {
-	max-width: 50%;	
-	text-align: center;
-	color: $mid-dark-text-color;
-}
-
-.social ul {
-	list-style: none;
-}
-
-.blogdescription {
-	height: 100px;
-	overflow: scroll;
-}
-
-.screenrecording {
-	height: 300px;
-	width: 500px;
-	text-align: center;
-}
-
-.gif {
-	text-align: center;
-}
-
-.projects {
-	margin: 10px;
-
-	a {
-		color: $mid-text-color;
-	}
-}

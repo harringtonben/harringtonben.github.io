@@ -1,0 +1,30 @@
+@import "variables";
+
+.about {
+    background-color: $content-background;
+    margin-top: 15px;
+    padding: 30px;
+    -webkit-box-shadow: $drop-shadow;
+    -moz-box-shadow: $drop-shadow;
+    box-shadow: $drop-shadow;
+
+    ul {
+        text-align: center;
+    }
+
+
+    li {
+        list-style: none;
+        display: inline-block;
+    }
+
+    .social-logo {
+        height: 50px;
+        width: 50px;
+    }
+
+    .me {
+        height: 150px;
+        width: 185px;
+    }
+}
