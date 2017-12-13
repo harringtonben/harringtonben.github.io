@@ -59,6 +59,11 @@
 		"heading": "Firebase",
 		"date": "10/31/2017",
 		"blogPost": "I already have a love-hate relationship with firebase. It is awesome, but man if you don't get the data structure perfect it is a freaking damn nightmare. This just made me stoked to get to the backend so we can pull data via a SQL database instead of basically a giant object."
+		},
+		{
+		"heading": "Angular, the love hate relationship",
+		"date": "12/12/2017",
+		"blogPost": "Man, does this feel like an accomplishment. I am sitting here writing my last blog after completing MVP for my front end capstone...this is surreal. I have really been getting into the nitty-gritty with angular this project and man it is so powerful and does make so many things much much easier for us to use, but at the same time man does it make things hard. It is a good thing that I am not a styling wizard otherwise I think I would hate angular due to the limitations it can have with cool animations and things, but from a strictly data standpoint it isn't too bad. Overall I definitely think I could dig working on angular as a major part of my day to day."
 		}
 	],
 	"projects":
