@@ -87,6 +87,16 @@
 		"Name": "Dem Badges",
 		"GitHubURL": "https://github.com/harringtonben/dembadges",
 		"GIFURL": "images/dembadges.gif"
+		},
+		{
+		"Name": "Pinterest Clone",
+		"GitHubURL": "https://github.com/nss-evening-cohort-06/pinterest-french-toast-mafia",
+		"GIFURL": "images/pinterest.gif"
+		},
+		{
+		"Name": "Cellar To Seller",
+		"GitHubURL": "https://github.com/harringtonben/cellartoseller",
+		"GIFURL": "images/cellartoseller.gif"
 		}
 	]
 }
